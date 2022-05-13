@@ -1,15 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <Header />
+  <div class="flexWrapper">
+    <AddTodo />
+    <!-- <TodoContainer /> -->
+  </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import AddTodo from "./components/AddTodo.vue";
+import TodoContainer from "./components/TodoContainer.vue";
+import Header from "./components/Header.vue";
 
 @Options({
   components: {
-    HelloWorld,
+    Header,
+    AddTodo,
+    TodoContainer,
   },
 })
 export default class App extends Vue {}
@@ -17,11 +24,25 @@ export default class App extends Vue {}
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: monospace, "Courier New", Courier;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #22b455;
+}
+
+html {
+  background-color: #020204;
+}
+
+body {
+  margin: 0px;
+}
+
+.flexWrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 0 auto;
 }
 </style>
