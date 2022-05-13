@@ -28,10 +28,6 @@ export default class AddTodo extends Vue {
     this.todoArray.push(newTodo);
 
     this.inputField = "";
-
-    // this.todoArray.forEach((task) => {
-    //   console.log(task.description);
-    // });
   }
 }
 </script>

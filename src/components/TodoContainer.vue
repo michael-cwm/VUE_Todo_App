@@ -22,8 +22,6 @@
 </template>
 
 <script lang="ts">
-// import AddTodo from "./AddTodo.vue";
-// import { TodoModel } from "@/models/TodoModel";
 import { ITask } from "../models/ITask";
 import { Vue } from "vue-class-component";
 import { Prop } from "vue-property-decorator";
@@ -49,7 +47,6 @@ export default class TodoContainer extends Vue {
   display: flex;
   align-items: center;
   justify-content: center;
-  // padding: 0px 10px 0px 10px;
   @media only screen and (min-width: 600px) {
     width: 550px;
   }
